@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.brioal.bottomtablayout.api.fragment.todayFragment">
+    <WebView
+        android:id="@+id/todayWebView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </WebView>
+    <!-- TODO: Update blank fragment layout -->
+    <com.yalantis.phoenix.PullToRefreshView
+        android:id="@+id/swipe_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:id="@+id/recycler_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+
+    </com.yalantis.phoenix.PullToRefreshView>
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:layout_centerInParent="true"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/colorAccent"
+        />
+</RelativeLayout>

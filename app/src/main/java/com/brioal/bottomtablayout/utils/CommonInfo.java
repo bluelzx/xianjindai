@@ -6,25 +6,8 @@ package com.brioal.bottomtablayout.utils;
  */
 
 public class CommonInfo {
+    public static  final String  HTML_URL="http://www.shoujiweidai.com/android/app1.html";
 
-    /**
-     * 用于调试标志
-     */
-    public static final String TAG = "MyTest";
-
-    /**
-     * 默认的编码方式
-     */
-    public static final String ENCODE_TYPE = "utf-8";
-
-    /**
-     * APP的当前版本号
-     */
-    public static final int APP_VERSION = 1;
-
-    /**
-     * 异步加载状态描述类
-     */
     public class LoaderStatus {
         /**
          * 下载完成标识字段

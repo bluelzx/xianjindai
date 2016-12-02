@@ -1,11 +1,11 @@
 package com.brioal.bottomtablayout.utils;
 
-import java.util.List;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+
+import java.util.List;
 
 /**
  * @ClassName: FragmentManagerUtils

@@ -2,9 +2,8 @@ package com.brioal.bottomtablayout.utils;
 
 import android.text.TextUtils;
 
-import com.example.parting_soul.news.bean.News;
-import com.example.parting_soul.news.utils.support.CommonInfo;
-import com.example.parting_soul.news.utils.support.LogUtils;
+
+import com.brioal.bottomtablayout.bean.News;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -12,6 +11,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 /**
  * Created by parting_soul on 2016/10/5.

@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">BottomTabLayout</string>
+    <string name="app_name">快速借贷</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="exit_click_back_again">再按一次退出程序</string>
+    <string name="time">2016-12-24 19:56</string>
+    <string name="author">网易</string>
+    <string name="title">text</string>
+    <string name="entry">立即体验</string>
 </resources>

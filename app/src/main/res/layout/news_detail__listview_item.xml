@@ -11,26 +11,27 @@
         android:id="@+id/news_pic"
         android:layout_width="90dp"
         android:layout_height="70dp"
-        android:paddingLeft="5dp"
+        android:layout_marginStart="10dp"
         android:src="@mipmap/imageview_default_bc" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/news_pic"
+        android:layout_toEndOf="@id/news_pic"
         android:orientation="vertical"
-        android:paddingLeft="10dp">
+        android:layout_marginStart="10dp">
 
         <TextView
             android:id="@+id/news_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLines="2"
-            android:text="text"
-            android:textColor="?attr/theme_textColor"
-            android:textSize="20sp" />
+            android:textColor="#000"
+            android:text="@string/title"
+            android:textSize="15sp" />
 
         <LinearLayout
+            android:layout_marginTop="3dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/news_title"
@@ -40,18 +41,18 @@
                 android:id="@+id/news_author_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="?attr/theme_textColor"
-                android:text="新华网"
+                android:text="@string/author"
+                android:textColor="#000"
                 android:textSize="13sp"/>
 
             <TextView
+                android:layout_marginStart="10dp"
                 android:id="@+id/news_date"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:paddingLeft="10dp"
-                android:text="2016-10-04 19:56"
-                android:textColor="?attr/theme_textColor"
+                android:text="@string/time"
+                android:textColor="#000"
                 android:textSize="13sp"/>
         </LinearLayout>
     </RelativeLayout>

@@ -9,6 +9,7 @@ import com.brioal.bottomtablayout.MyApplication;
 import com.brioal.bottomtablayout.api.Api;
 import com.brioal.bottomtablayout.bean.News;
 import com.brioal.bottomtablayout.utils.JsonParseTool;
+import com.brioal.bottomtablayout.utils.Url;
 
 import java.util.List;
 
@@ -23,29 +24,24 @@ public class CaiJIngTask {
 private static  final  String TAG=CaiJIngTask.class.getSimpleName();
 
 
-
-    public static  void getMessge(){
-
-        StringBuffer sb=new StringBuffer();
-        StringBuffer buffer = sb.append(Api.NewsAPI.Params.REQUEST_URL).append("?").append(Api.NewsAPI.Params.REQUEST_URL_TYPR_NAME)
-                .append("=").append("caijing").append("&").append(Api.NewsAPI.Params.REQUEST_URL_KEY);
+    public static  void getMessge(String url){
 
 
-        StringRequest request=new StringRequest(buffer.toString(), new Response.Listener<String>() {
+        StringRequest request=new StringRequest(url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 List<News> list = JsonParseTool.parseNewsJsonWidthJSONObject(response);
-
-                MyApplication.getmList().addAll(list);
-
+                if(list.size()>0){
+                    MyApplication.getmList().clear();
+                    MyApplication.getmList().addAll(list);
+                }
                 Log.e(TAG,mList.toString());
-
-
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e(TAG,error.toString());
+
             }
         });
 

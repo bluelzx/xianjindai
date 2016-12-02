@@ -1,13 +1,23 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.brioal.bottomtablayout.fragment.AboutFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
+        android:scaleType="fitXY"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:src="@mipmap/groud"/>
 
-</FrameLayout>
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/saveImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@mipmap/erweima"
+        android:layout_centerInParent="true"
+        />
+
+</RelativeLayout>

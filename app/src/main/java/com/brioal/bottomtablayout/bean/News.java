@@ -82,4 +82,16 @@ public class News implements Serializable {
     public void setIs_collected(boolean is_collected) {
         this.is_collected = is_collected;
     }
+
+    @Override
+    public String toString() {
+        return "News{" +
+                "title='" + title + '\'' +
+                ", picPath='" + picPath + '\'' +
+                ", url='" + url + '\'' +
+                ", date='" + date + '\'' +
+                ", is_collected=" + is_collected +
+                ", author_name='" + author_name + '\'' +
+                '}';
+    }
 }
