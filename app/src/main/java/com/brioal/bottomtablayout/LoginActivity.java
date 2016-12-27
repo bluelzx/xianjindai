@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.brioal.bottomtablayout.fragment.SplashFragment;
 import com.brioal.bottomtablayout.utils.FragmentManagerUtils;
+import com.umeng.analytics.MobclickAgent;
 
 public class LoginActivity extends AppCompatActivity {
     @Override
@@ -19,7 +20,14 @@ public class LoginActivity extends AppCompatActivity {
         initView();
 
     }
-
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
+    }
     private void initView() {
         String name = SplashFragment.class.getName();
         Fragment fragment = FragmentManagerUtils.getFragment(this, name);

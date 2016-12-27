@@ -29,4 +29,5 @@
         android:layout_gravity="center"
         app:SpinKit_Color="@color/colorAccent"
         />
+
 </RelativeLayout>

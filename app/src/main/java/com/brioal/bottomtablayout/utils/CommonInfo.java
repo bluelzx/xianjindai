@@ -6,47 +6,7 @@ package com.brioal.bottomtablayout.utils;
  */
 
 public class CommonInfo {
-    public static  final String  HTML_URL="http://www.shoujiweidai.com/android/app1.html";
-
-    public class LoaderStatus {
-        /**
-         * 下载完成标识字段
-         */
-        public static final int DOWNLOAD_FINISH_MSG = 11111;
-
-        /**
-         * 下载失败标识字段
-         */
-        public static final int DOWNLOAD_FAILED_MSG = 11112;
-
-        /**
-         * 下载完成移除线程字段
-         */
-        public static final int DOWNLOAD_FINISH_REMOVE_THREAD_MSG = 111113;
-        /**
-         * 从数据库读取缓存结束
-         */
-        public static final int READ_CACHE_FROM_DATABASE_FINISH = 1111114;
-        /**
-         * 显示进度条
-         */
-        public static final int SHOW_PROGRESS_DIALOG = 1111115;
-    }
-
-    /**
-     * 缓存信息类
-     */
-    public class Cache {
-        /**
-         * 图片缓存文件夹名
-         */
-        public static final String IMAGE_CACHE_DIR_NAME = "picture";
-
-        /**
-         * 图片缓存的占SD空间的最大内存
-         */
-        public static final long IMAGE_CACHE_SIZE = 50 * 1024 * 1024;
-    }
+     public static  final String  HTML_URL="http://www.shoujiweidai.com/android/app1.html";
 
     /**
      * 图片缩放级别

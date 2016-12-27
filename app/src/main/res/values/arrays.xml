@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="strList">
+        private static final String[] nx = { "1", "2", "3", "4", "5", "10", "15",
+        "20", "25", "30" };
+        private static final String[] lv = { "最新基准利率7折", "最新基准利率7.5折", "最新基准利率8折",
+        "最新基准利率8.5折", "最新基准利率9折", "最新基准利率9.5折", "最新基准利率", "最新基准利率1.1倍",
+        "最新基准利率1.2倍", "最新基准利率1.3倍" };
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+    </string-array>
+    <string-array name="lilv">
+        <item>最新基准利率7折</item>
+        <item>最新基准利率7.5折</item>
+        <item>最新基准利率8折</item>
+        <item>最新基准利率8.5折</item>
+        <item>最新基准利率9折</item>
+        <item>最新基准利率9.5折</item>
+        <item>最新基准利率</item>
+        <item>最新基准利率1.1倍</item>
+        <item>最新基准利率1.2倍</item>
+        <item>最新基准利率1.3倍</item>
+    </string-array>
+</resources>

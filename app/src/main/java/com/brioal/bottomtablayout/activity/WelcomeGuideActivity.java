@@ -11,13 +11,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.brioal.bottomtablayout.LoginActivity;
 import com.brioal.bottomtablayout.MainActivity;
 import com.brioal.bottomtablayout.R;
-import com.brioal.bottomtablayout.Task.TopTask;
 import com.brioal.bottomtablayout.adapter.GuideViewPagerAdapter;
 import com.brioal.bottomtablayout.utils.SharedPerferenceUtil;
-import com.brioal.bottomtablayout.utils.Url;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +26,7 @@ public class WelcomeGuideActivity extends AppCompatActivity implements View.OnCl
     private Button startBtn;
 
     // 引导页图片资源
-    private static final int[] pics = { R.layout.guide_view1,
+    private static int[] pics = { R.layout.guide_view1,
             R.layout.guide_view2,R.layout.guide_view4,R.layout.guide_view3};
     // 底部小点图片
     private ImageView[] dots;
@@ -42,7 +39,12 @@ public class WelcomeGuideActivity extends AppCompatActivity implements View.OnCl
         setContentView(R.layout.activity_welcome_guide);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-        views = new ArrayList<View>();
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+
+            views = new ArrayList<View>();
         // 初始化引导页视图列表
         for (int i = 0; i < pics.length; i++) {
             View view = LayoutInflater.from(this).inflate(pics[i], null);
@@ -52,7 +54,11 @@ public class WelcomeGuideActivity extends AppCompatActivity implements View.OnCl
                 startBtn.setTag("enter");
                 startBtn.setOnClickListener(this);
             }
+
+
             views.add(view);
+
+
         }
 
         vp = (ViewPager) findViewById(R.id.vp_guide);
@@ -85,6 +91,8 @@ public class WelcomeGuideActivity extends AppCompatActivity implements View.OnCl
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        pics=null;
+
     }
 
     private void initDots() {
@@ -133,14 +141,15 @@ public class WelcomeGuideActivity extends AppCompatActivity implements View.OnCl
 
     @Override
     public void onClick(View v) {
+
         if (v.getTag().equals("enter")) {
             enterMainActivity();
             return;
-        }
 
+        }
         int position = (Integer) v.getTag();
-        setCurView(position);
-        setCurDot(position);
+        setCurView(position+1);
+        setCurDot(position+1);
     }
 
 
@@ -170,5 +179,6 @@ public class WelcomeGuideActivity extends AppCompatActivity implements View.OnCl
         }
 
     }
+
 
 }

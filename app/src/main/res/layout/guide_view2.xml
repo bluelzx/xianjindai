@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+     >
 
     <ImageView
         android:layout_width="match_parent"
@@ -10,15 +10,6 @@
         android:scaleType="centerCrop"
         android:src="@mipmap/auto_2"
         />
-    <ImageView
-        android:layout_marginTop="10dp"
-        android:id="@+id/jiantou"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="10dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="20dp"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@mipmap/icon_04"/>
+
 
 </RelativeLayout>

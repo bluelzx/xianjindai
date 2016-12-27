@@ -13,13 +13,23 @@ import java.util.ArrayList;
  */
 
 public class MyApplication extends Application {
+    public static MyApplication application;
+    private static MyApplication instance;
+
     // 建立请求队列
     public static RequestQueue queue;
     @Override
     public void onCreate() {
         super.onCreate();
-
+        application = this;
+        instance = this;
         queue = Volley.newRequestQueue(getApplicationContext());
+    }
+    public static MyApplication getInstance(){
+        if(instance==null){
+            instance = new MyApplication();
+        }
+        return instance;
     }
     public static RequestQueue getVolleyRequestQueue() {
         return queue;

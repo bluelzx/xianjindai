@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="4">
+    <Button
+        android:id="@+id/shangye"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="商业贷款"
+        android:textSize="20sp"/>
+    <Button
+        android:id="@+id/gongjijin"
+        android:layout_weight="1"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="公积金贷款"/>
+    <Button
+        android:id="@+id/hunhe"
+        android:layout_weight="1"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="混合贷款"/>
+
+</LinearLayout>

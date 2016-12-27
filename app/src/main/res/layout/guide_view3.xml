@@ -8,7 +8,7 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@mipmap/auto_4" />
-    <android.support.v7.widget.AppCompatButton
+    <Button
         android:id="@+id/btn_enter"
         android:layout_width="126dp"
         android:layout_height="45dp"
@@ -18,7 +18,6 @@
         android:text="@string/entry"
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:visibility="visible"
         android:padding="12dp"
         />
 </FrameLayout>

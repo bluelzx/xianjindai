@@ -22,7 +22,7 @@ import com.github.ybq.android.spinkit.SpinKitView;
 import com.yalantis.phoenix.PullToRefreshView;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
-import butterknife.BindView;
+import butterknife.Bind;
 import butterknife.ButterKnife;
 
 
@@ -32,11 +32,11 @@ import butterknife.ButterKnife;
 public class InternalFragment extends Fragment {
 
     private final String TAG = InternalFragment.class.getSimpleName();
-    @BindView(R.id.recycler_layout)
+    @Bind(R.id.recycler_layout)
     RecyclerView recyclerLayout;
-    @BindView(R.id.swipe_layout)
+    @Bind(R.id.swipe_layout)
     PullToRefreshView swipeLayout;
-    @BindView(R.id.spin_kit1)
+    @Bind(R.id.spin_kit1)
     SpinKitView spinKit1;
 
     private InternetAdapter mAdapter;
@@ -82,7 +82,7 @@ public class InternalFragment extends Fragment {
     private void getDate() {
 
         Log.e(TAG, String.valueOf(MyApplication.getmList().size()));
-        if(MyApplication.getmList().size()>0){
+        if (MyApplication.getmList().size() > 0) {
             spinKit1.setVisibility(View.GONE);
             recyclerLayout.setLayoutManager(new LinearLayoutManager(getContext()));
             mAdapter = new InternetAdapter(MyApplication.getmList());
@@ -99,4 +99,9 @@ public class InternalFragment extends Fragment {
     }
 
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        ButterKnife.unbind(this);
+    }
 }
